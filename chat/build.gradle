@@ -81,6 +81,7 @@ MobSDK {
     appKey "2c15e14bcbe15" //share_sdk appkey
     appSecret "ff21210d91ecb7d5082c4560afb0c83f"
     ShareSDK {
+        version "3.7.3"
         //平台配置信息
         gui true
         devInfo {
