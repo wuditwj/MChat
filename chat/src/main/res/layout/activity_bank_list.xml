@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.walletActivity.BankListActivity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/my_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/card_list"
+        android:layout_below="@id/layout_toolbar"
+        android:background="@color/white"
+        android:layout_height="wrap_content"/>
+    <com.aries.ui.view.radius.RadiusTextView
+        android:layout_width="match_parent"
+        android:text="+  添加银行卡"
+        android:id="@+id/add_card"
+        app:rv_strokeColor="@color/blue0"
+        app:rv_strokeWidth="1px"
+        android:gravity="center"
+        android:textColor="@color/blue0"
+        app:rv_radius="2.5dp"
+        android:textSize="17sp"
+        app:rv_backgroundColor="@color/white"
+        android:layout_margin="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:layout_height="50dp"/>
+    <TextView
+        android:text="友情提醒：仅支持借记卡（储蓄卡），不支持信用卡"
+        android:gravity="center"
+        android:id="@+id/content"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

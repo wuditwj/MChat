@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.walletActivity.WalletPayPwd">
+
+    <include layout="@layout/my_toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="第一次进入钱包，请先设置支付密码"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="密码为6位阿拉伯数字" />
+
+    <cn.wildfire.chat.app.widget.PassWordLayout
+        android:id="@+id/passLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44px"
+        app:box_draw_type="rect"
+        app:interval_width="4dp"
+        app:item_height="45dp"
+        app:item_width="45dp"
+        app:pass_inputed_type="stars"
+        app:pass_leng="six" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="请再输入一遍" />
+
+    <cn.wildfire.chat.app.widget.PassWordLayout
+        android:id="@+id/passLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44px"
+        app:box_draw_type="rect"
+        app:interval_width="4dp"
+        app:item_height="45dp"
+        app:item_width="45dp"
+        app:pass_inputed_type="stars"
+        app:pass_leng="six" />
+
+</LinearLayout>

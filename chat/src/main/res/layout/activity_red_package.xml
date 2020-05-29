@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="金额"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/editor_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:text="元"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/package_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="红包个数"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="1"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:text="个"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/package_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="谁可以领"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/choose_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@mipmap/ic_left_more"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="right"
+            android:hint="可选一人"
+            android:inputType="number"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/member_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_10"
+        android:text="群人数"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/envelope_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:hint="恭喜发财，大吉大利！"
+        android:padding="10dp"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/envelope_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="￥0.00"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
+
+    <com.allen.library.SuperButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="16dp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="塞钱进红包"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:sCornersRadius="5dp"
+        app:sSolidColor="@color/colorPrimary"
+        app:sStrokeColor="@color/colorPrimary" />
+</LinearLayout>

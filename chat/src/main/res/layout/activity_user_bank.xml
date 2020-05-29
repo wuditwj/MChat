@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.walletActivity.UserBankActivity">
+
+    <include layout="@layout/my_toolbar" />
+
+    <com.aries.ui.view.radius.RadiusRelativeLayout
+        android:id="@+id/bg_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        app:rv_backgroundColor="@color/white"
+        app:rv_radius="5dp"
+        app:rv_strokeColor="@color/blue0"
+        app:rv_strokeWidth="1px">
+
+        <ImageView
+            android:id="@+id/bank_logo"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/bank_name"
+            android:layout_marginLeft="@dimen/dp_10" />
+
+        <TextView
+            android:id="@+id/bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="建设银行"
+            android:textColor="@color/black_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bank_name"
+            android:layout_alignLeft="@+id/bank_name"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="储蓄卡"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/card_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bank_name"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:text="111111"
+            android:textSize="17sp" />
+
+    </com.aries.ui.view.radius.RadiusRelativeLayout>
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/un_bind_Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="解绑这张卡"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:rv_backgroundColor="@color/colorPrimary"
+        app:rv_radius="2.5dp" />
+</LinearLayout>

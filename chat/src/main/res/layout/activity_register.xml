@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!--    <com.hjq.bar.TitleBar-->
+    <!--        android:background="@color/white"-->
+    <!--        app:bar_style="transparent"-->
+    <!--        app:title_right=""-->
+    <!--        app:color_right="@color/color_F3598D"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:id="@+id/toolbar"-->
+    <!--        android:layout_height="wrap_content"/>-->
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:src="@mipmap/bg_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:rv_radius="5dp"
+            app:rv_strokeWidth="1px"
+            app:rv_strokeColor="@color/gray3"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_mobile"
+                android:padding="5dp"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_margin="5dp"
+                android:layout_width="1px"
+                android:background="@color/gray3"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:focusable="true"
+                android:layout_gravity="center_vertical"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray1"
+                android:textSize="15sp" />
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            app:rv_radius="5dp"
+            app:rv_strokeWidth="1px"
+            app:rv_strokeColor="@color/gray3"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_pwd"
+                android:padding="5dp"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_margin="5dp"
+                android:layout_width="1px"
+                android:background="@color/gray3"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:id="@+id/authCodeEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:drawablePadding="@dimen/dp_10"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray1"
+                android:textSize="15sp" />
+            <View
+                android:layout_margin="5dp"
+                android:layout_width="1px"
+                android:background="@color/gray3"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/requestAuthCodeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:textColor="@color/gray1"
+                android:gravity="center_vertical"
+                android:text="发送验证码"
+                />
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+
+        <com.aries.ui.view.radius.RadiusLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            app:rv_radius="5dp"
+            app:rv_strokeWidth="1px"
+            app:rv_strokeColor="@color/gray3"
+            android:layout_height="40dp">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/ic_pwd"
+                android:padding="5dp"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_margin="5dp"
+                android:layout_width="1px"
+                android:background="@color/gray3"
+                android:layout_height="match_parent"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:drawablePadding="@dimen/dp_10"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray1"
+                android:textSize="15sp" />
+        </com.aries.ui.view.radius.RadiusLinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:id="@+id/loginButton"
+            app:rv_radius="20dp"
+            android:gravity="center"
+            app:rv_backgroundColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:text="注册"
+            android:textSize="17sp" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="10sp"
+            android:text="登陆即代表您已同意"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="《萌聊IM用户协议》"
+            android:id="@+id/xieyi"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="和"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/yinsi"
+            android:text="《萌聊IM隐私政策》"
+            android:textSize="10sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

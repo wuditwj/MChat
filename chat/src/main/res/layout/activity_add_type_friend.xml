@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.setting.AddTypeFriend">
+
+    <include layout="@layout/my_toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10"
+        android:text="可以通过以下方式可以找到我" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_option_item"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="9"
+            android:text="手机号码"
+            android:textColor="@color/black0"
+            android:textSize="16sp" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/mobile"
+            style="@style/IosSwitch"
+            android:layout_marginRight="-20dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/linearlayout_underline_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_option_item"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="9"
+            android:text="萌聊号"
+            android:textColor="@color/black0"
+            android:textSize="16sp" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/account"
+            style="@style/IosSwitch"
+            android:layout_marginRight="-20dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10"
+        android:text="关闭后其他用户不能通过上述信息找到你" />
+
+</LinearLayout>

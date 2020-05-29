@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.FeedBackActivity">
+
+    <include layout="@layout/my_toolbar" />
+
+    <fj.edittextcount.lib.FJEditTextCount
+        android:id="@+id/fjEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10"
+        app:etHint="请输入您对萌聊的意见和反馈"
+        app:etLineColor="@color/white"
+        app:etMaxLength="150"
+        app:etMinHeight="200dp"
+        app:etPromptTextColor="@color/colorAccent"
+        app:etPromptTextSize="15sp"
+        app:etTextColor="@color/colorAccent"
+        app:etTextSize="15sp"
+        app:etType="percentage" />
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:rv_backgroundColor="@color/colorPrimary"
+        app:rv_radius="2.5dp" />
+
+</LinearLayout>

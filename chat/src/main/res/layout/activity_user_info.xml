@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.personalInformationActivity.UserInfoActivity">
+
+    <include layout="@layout/my_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/modify_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="@drawable/selector_common_item">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="头像"
+            android:textColor="@color/black0" />
+
+        <ImageView
+            android:id="@+id/portraitImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/default_header" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@mipmap/ic_left_more" />
+    </LinearLayout>
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/nickyName"
+        style="@style/me_person_style"
+        app:sLeftTextString="昵称"
+        app:sRightTextString="未设置" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/meng_account"
+        style="@style/me_person_style"
+        app:sLeftTextString="萌聊号"
+        app:sRightTextString="未设置" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/user_qr_code"
+        style="@style/me_person_style"
+        app:sLeftTextString="我的二维码"
+        app:sRightTvDrawableRight="@mipmap/ic_qr_code" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/sex"
+        style="@style/me_person_style"
+        android:layout_marginTop="10dp"
+        app:sLeftTextString="性别"
+        app:sRightTextString="未设置" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/area"
+        style="@style/me_person_style"
+        app:sLeftTextString="地区"
+        app:sRightTextString="未设置" />
+
+    <View style="@style/me_view_style" />
+
+</LinearLayout>

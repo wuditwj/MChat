@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.ReportActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <fj.edittextcount.lib.FJEditTextCount
+            android:id="@+id/fjEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dp_10"
+            app:etHint="请填写举报详细信息(必填)"
+            app:etLineColor="@color/white"
+            app:etMaxLength="150"
+            app:etMinHeight="200dp"
+            app:etPromptTextColor="@color/colorAccent"
+            app:etPromptTextSize="15sp"
+            app:etTextColor="@color/colorAccent"
+            app:etTextSize="15sp"
+            app:etType="percentage" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@color/line" />
+
+        <cn.bingoogolapple.photopicker.widget.BGASortableNinePhotoLayout
+            android:id="@+id/photots"
+            style="@style/WrapWrap"
+            android:layout_margin="10dp"
+            app:bga_snpl_deleteDrawable="@mipmap/bga_pp_ic_delete"
+            app:bga_snpl_deleteDrawableOverlapQuarter="true"
+            app:bga_snpl_editable="true"
+            app:bga_snpl_itemCornerRadius="0dp"
+            app:bga_snpl_itemSpanCount="4"
+            app:bga_snpl_itemWhiteSpacing="2dp"
+            app:bga_snpl_itemWidth="0dp"
+            app:bga_snpl_maxItemCount="4"
+            app:bga_snpl_otherWhiteSpacing="10dp"
+            app:bga_snpl_placeholderDrawable="@mipmap/bga_pp_ic_holder_light"
+            app:bga_snpl_plusDrawable="@mipmap/ic_add_photo"
+            app:bga_snpl_plusEnable="true"
+            app:bga_snpl_sortable="true" />
+    </LinearLayout>
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:rv_backgroundColor="@color/colorPrimary"
+        app:rv_radius="2.5dp" />
+
+</LinearLayout>

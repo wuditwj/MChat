@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inputMethodView"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                style="@style/style_black_normal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_item_height"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="请输入支付密码" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/spacing_tiny"
+                android:src="@mipmap/ic_page_close" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_separate_line"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:text="余额支付" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/style_black_normal_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:textColor="#FF0000"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <View
+            style="@style/style_separate_line"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp" />
+
+        <cn.wildfire.chat.app.widget.PayPwdView
+            android:id="@+id/payPwdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/forget_plus_card_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="right"
+            android:padding="@dimen/dp_10"
+            android:text="忘记密码?"
+            android:textColor="#F3598D" />
+    </LinearLayout>
+
+
+    <cn.wildfire.chat.app.widget.PwdInputMethodView
+        android:id="@+id/inputMethodView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

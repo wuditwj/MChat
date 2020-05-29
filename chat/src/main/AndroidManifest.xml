@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.wildfirechat.chat">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 通过GPS得到精确位置 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 通过网络得到粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 访问网络. 某些位置信息需要从网络服务器获取 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 访问WiFi状态. 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 修改WiFi状态. 发起WiFi扫描, 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 访问网络状态, 检测网络的可用性. 需要网络运营商相关信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 访问手机当前状态, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" /> <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="cn.wildfire.chat.app.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="cn.wildfire.chat.app.sysmessage.SystemBotMessage"
+            android:configChanges="keyboardHidden|orientation|screenSize"></activity>
+        <activity
+            android:name="cn.wildfire.chat.app.sysmessage.PaySupport"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.ReportActivity"
+
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.ReportReasonListActivity"
+
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.FeedBackActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.setting.SetPwd"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.setting.AddTypeFriend"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.setting.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.setting.Setting"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.WalletPayCode"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.ReceiveAndSendPackageList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+
+            />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.BillActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+
+            />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.AddBankAccountActivity"
+
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.AddBank"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.UserBankActivity"
+
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.BankListActivity"
+
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.WithDrawActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.RechargeAmount"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.WalletActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.WalletPayPwd"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.walletActivity.WalletCode"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.personalInformationActivity.ChangeAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.personalcenter.personalInformationActivity.UserInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.shop.PayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.shop.EditorAddressActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.shop.AddressListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.shop.SubmitOrderActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.shop.OrderListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.shop.GoodDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.app.main.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.wildfire.chat.kit.conversation.ConversationActivity"
+            android:launchMode="singleTask"
+            />
+        <activity
+            android:name="cn.wildfire.chat.app.group.GroupMembers"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="cn.wildfire.chat.app.envelope.RedPackageActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="cn.wildfire.chat.app.login.LoginActivity"
+            /> <!-- 地图 -->
+        <activity android:name="cn.wildfire.chat.app.envelope.RedPackageDetailActivity" />
+        <activity
+            android:name="cn.wildfire.chat.kit.user.SetAliasActivity"
+            android:label="设置用户备注"
+            />
+        <activity
+            android:name="cn.wildfire.chat.kit.user.ChangeMyNameActivity"
+            android:label="修改昵称"
+            />
+        <activity
+            android:name="cn.wildfire.chat.kit.mm.TakePhotoActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name="cn.wildfire.chat.app.third.location.ui.activity.MyLocationActivity"
+            />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.SetGroupNameActivity"
+            android:label="修改群名称"
+            />
+        <activity android:name="cn.wildfire.chat.app.login.BindWeChat" />
+        <activity android:name="cn.wildfire.chat.app.login.RegisterActivity" />
+        <activity
+            android:name="cn.wildfire.chat.app.setting.SettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="设置"
+
+            />
+        <activity
+            android:name="cn.wildfire.chat.app.setting.AboutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="关于" />
+        <activity
+            android:name="cn.wildfire.chat.app.third.location.ui.activity.ShowLocationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.mm.MMPreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name="cn.wildfire.chat.kit.voip.SingleCallActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="${applicationId}.kit.voip.single" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.wildfire.chat.kit.ContactListActivity" />
+        <activity
+            android:name="cn.wildfire.chat.kit.conversation.CreateConversationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="创建会话" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.AddGroupMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="添加新成员" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.RemoveGroupMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="删除群成员" />
+        <activity
+            android:name="cn.wildfire.chat.kit.conversation.mention.MentionGroupMemberActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="选择群成员" />
+        <activity
+            android:name="cn.wildfire.chat.kit.conversation.mention.MentionGroupMemberListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="选择群成员" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.GroupListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="群列表" />
+        <activity
+            android:name="cn.wildfire.chat.kit.contact.newfriend.FriendRequestListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="新朋友" />
+        <activity
+            android:name="cn.wildfire.chat.kit.contact.newfriend.SearchUserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="搜索用户" />
+        <activity
+            android:name="cn.wildfire.chat.kit.contact.newfriend.InviteFriendActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="邀请好友" />
+        <activity
+            android:name="cn.wildfire.chat.kit.user.UserInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="用户信息" />
+        <activity
+            android:name="cn.wildfire.chat.kit.settings.PrivacySettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="隐私设置" />
+        <activity
+            android:name="cn.wildfire.chat.kit.settings.blacklist.BlacklistListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="黑名单" />
+        <activity
+            android:name="cn.wildfire.chat.kit.settings.MessageNotifySettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="新消息通知" />
+        <activity
+            android:name="cn.wildfire.chat.kit.conversation.ConversationInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="会话详情" />
+        <activity
+            android:name="cn.wildfire.chat.kit.chatroom.ChatRoomListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="聊天室列表" />
+        <activity
+            android:name="cn.wildfire.chat.kit.search.SearchPortalActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="搜索中心" />
+        <activity
+            android:name="cn.wildfire.chat.kit.conversation.forward.ForwardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="转发" />
+        <activity
+            android:name="cn.wildfire.chat.kit.conversation.forward.PickConversationTargetToForwardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="选取会话" />
+        <activity
+            android:name="cn.wildfire.chat.app.login.SMSLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="登录" />
+        <activity
+            android:name="cn.wildfire.chat.kit.channel.ChannelListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="频道列表" />
+        <activity
+            android:name="cn.wildfire.chat.kit.channel.CreateChannelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="创建频道"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden|adjustResize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.channel.ChannelInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+
+            />
+        <activity
+            android:name="cn.wildfire.chat.app.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="${applicationId}.main" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.wildfire.chat.kit.WfcWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="${applicationId}.webview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.wildfire.chat.kit.search.SearchMessageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.channel.SearchChannelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.contact.newfriend.SearchFriendActivity"
+
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.PickGroupMemberActivity"
+            android:label="选择成员" />
+        <activity
+            android:name="cn.wildfire.chat.app.main.PCLoginActivity"
+            android:label="PC登录" />
+        <activity android:name="cn.wildfire.chat.kit.qrcode.QRCodeActivity" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.GroupInfoActivity"
+            android:label="群信息" />
+        <activity
+            android:name="cn.wildfire.chat.kit.qrcode.ScanQRCodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="扫一扫" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.manage.GroupManageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.manage.GroupManagerListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.manage.AddGroupManagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.manage.GroupMuteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.manage.GroupMemberPermissionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.GroupMemberListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="群成员列表" />
+        <activity
+            android:name="cn.wildfire.chat.kit.contact.pick.PickContactActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="联系人选择" />
+        <activity
+            android:name="cn.wildfire.chat.kit.group.SetGroupAnnouncementActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="cn.wildfire.chat.kit.voip.MultiCallActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="${applicationId}.kit.voip.multi" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.wildfire.chat.kit.voip.VoipDummyActivity"
+            android:launchMode="singleInstance" />
+<!--        <activity android:name="cn.wildfire.chat.moment.PublishFeedActivity" />-->
+<!--        <activity android:name="cn.wildfire.chat.moment.FeedMessageActivity" />-->
+<!--        <activity android:name="cn.wildfire.chat.moment.FeedDetailActivity" />-->
+<!--        <activity android:name="cn.wildfire.chat.moment.FeedListActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="${applicationId}.moment" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        <activity android:name="cn.wildfire.chat.moment.FeedVisibleScopeActivity" />-->
+        <activity android:name="cn.wildfire.chat.app.main.PCSessionActivity" /> <!-- moment -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="TOEBZ-67IR4-ZDHUV-DSDXX-TJZU7-UYFE7" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service android:name="cn.wildfire.chat.kit.voip.VoipCallService" />
+    </application>
+
+</manifest>

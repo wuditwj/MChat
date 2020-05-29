@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.daasuu.bl.BubbleLayout
+        android:id="@+id/audioContentLayout"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        app:bl_arrowDirection="left"
+        app:bl_arrowHeight="8dp"
+        app:bl_arrowPosition="10dp"
+        app:bl_bubbleColor="@color/white"
+        app:bl_arrowWidth="8dp"
+        app:bl_cornersRadius="6dp"
+        >
+
+        <ImageView
+            android:id="@+id/audioImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/audio_animation_left_list" />
+        <TextView
+            android:id="@+id/durationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            android:text="6''" />
+
+    </com.daasuu.bl.BubbleLayout>
+
+
+
+    <View
+        android:id="@+id/playStatusIndicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/shape_red_dot" />
+
+</LinearLayout>

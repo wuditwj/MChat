@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.shop.EditorAddressActivity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/my_toolbar" />
+
+    <EditText
+        android:id="@+id/name"
+        android:hint="联系人姓名"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:background="@drawable/linearlayout_underline_view"
+        android:padding="@dimen/dp_10"
+        android:layout_height="50dp" />
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:hint="联系人手机"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textSize="14sp"
+        android:background="@drawable/linearlayout_underline_view"
+        android:padding="@dimen/dp_10"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/choose_area"
+        android:layout_width="match_parent"
+        android:hint="所在地区"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:drawableRight="@mipmap/ic_left_more"
+        android:background="@drawable/linearlayout_underline_view"
+        android:layout_height="50dp"/>
+    <EditText
+        android:id="@+id/address_detail"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:hint="详细地址：如道路、门牌号、小区、楼栋号、单元室等"
+        android:background="@drawable/linearlayout_underline_view"
+        android:padding="@dimen/dp_10"
+        android:layout_height="50dp" />
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/save"
+        app:rv_radius="2.5dp"
+        android:layout_width="match_parent"
+        app:rv_backgroundColor="#F97BA6"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:layout_margin="@dimen/dp_10"
+        android:textSize="17sp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+
+
+    <com.daasuu.bl.BubbleLayout
+        android:id="@+id/audioContentLayout"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        app:bl_arrowDirection="right"
+        app:bl_arrowHeight="8dp"
+        app:bl_arrowPosition="10dp"
+        app:bl_bubbleColor="#FFC3E9FC"
+        app:bl_arrowWidth="8dp"
+        app:bl_cornersRadius="6dp"
+        >
+
+        <ImageView
+            android:id="@+id/audioImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/audio_animation_right_list" />
+        <TextView
+            android:id="@+id/durationTextView"
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="3dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_toLeftOf="@id/audioContentLayout"
+            android:text="6''" />
+    </com.daasuu.bl.BubbleLayout>
+
+</LinearLayout>

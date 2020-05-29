@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="me_superTextView_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">@dimen/dp_10</item>
+        <item name="android:layout_marginRight">@dimen/dp_10</item>
+        <item name="sShapeCornersBottomLeftRadius">3dp</item>
+        <item name="sShapeCornersBottomRightRadius">3dp</item>
+        <item name="sShapeCornersTopLeftRadius">3dp</item>
+        <item name="sShapeCornersTopRightRadius">3dp</item>
+        <item name="sUseShape">true</item>
+        <item name="sShapeSelectorPressedColor">@color/gray4</item>
+        <item name="sShapeSelectorNormalColor">@color/white</item>
+        <item name="sRightIconRes">@mipmap/ic_left_more</item>
+    </style>
+
+    <style name="me_person_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sDividerLineType">top</item>
+        <item name="sRightIconRes">@mipmap/ic_left_more</item>
+        <item name="sRightTextColor">@color/gray7</item>
+        <item name="sRightTextSize">13sp</item>
+        <item name="sUseShape">true</item>
+        <item name="sShapeSelectorPressedColor">@color/gray4</item>
+        <item name="sShapeSelectorNormalColor">@color/white</item>
+    </style>
+
+    <style name="me_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">@dimen/dp_10</item>
+        <item name="android:layout_marginRight">@dimen/dp_10</item>
+    </style>
+
+    <style name="me_wallet_superText_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="sRightIconRes">@mipmap/ic_left_more</item>
+        <item name="sDividerLineType">bottom</item>
+        <item name="sUseShape">true</item>
+        <item name="sShapeSelectorPressedColor">@color/gray4</item>
+        <item name="sShapeSelectorNormalColor">@color/white</item>
+    </style>
+
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

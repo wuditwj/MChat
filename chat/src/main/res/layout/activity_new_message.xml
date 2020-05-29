@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.NewMessageActivity">
+
+    <include layout="@layout/my_toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10"
+        android:text="关闭后,手机将不再接受新消息通知" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_option_item"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="9"
+            android:text="接受新消息通知"
+            android:textColor="@color/black0"
+            android:textSize="16sp" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/get_new_message"
+            style="@style/IosSwitch"
+            android:layout_marginRight="-20dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/linearlayout_underline_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_option_item"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="9"
+            android:text="通知显示消息详情"
+            android:textColor="@color/black0"
+            android:textSize="16sp" />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/show_message"
+            style="@style/IosSwitch"
+            android:layout_marginRight="-20dp" />
+    </LinearLayout>
+
+</LinearLayout>

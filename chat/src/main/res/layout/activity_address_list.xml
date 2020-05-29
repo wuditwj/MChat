@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.wildfire.chat.app.shop.AddressListActivity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/my_toolbar" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_toolbar"
+        android:layout_marginBottom="60dp"
+        app:srlEnableLoadMore="false">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/address_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.aries.ui.view.radius.RadiusTextView
+        android:id="@+id/add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="新增地址"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:rv_backgroundColor="#F97BA6"
+        app:rv_radius="2.5dp" />
+
+</RelativeLayout>

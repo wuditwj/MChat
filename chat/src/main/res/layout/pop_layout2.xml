@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/line"
+        android:layout_height="1px"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:background="@drawable/linearlayout_top_line_view"
+        >
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:id="@+id/cancel"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:text="取消"
+            android:layout_height="match_parent" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/ok"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/dp_10"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="确定"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

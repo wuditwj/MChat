@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.walletActivity.BillActivity">
+
+    <include layout="@layout/my_toolbar"/>
+
+
+    <com.allen.library.SuperTextView
+        app:sRightIconRes="@mipmap/ic_spinner"
+        android:id="@+id/showBill"
+        app:sLeftIconRes="@mipmap/ic_date"
+        app:sLeftTextString=""
+        app:sDividerLineType="none"
+        android:layout_marginTop="@dimen/dp_10"
+        app:sRightTextString="筛选"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/smart_layout"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/list"
+            android:background="@color/white"
+            android:layout_height="wrap_content"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

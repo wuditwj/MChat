@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+        <com.hjq.bar.TitleBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            app:icon_left="@color/transparent"
+            app:icon_right="@mipmap/ic_home_add_friend"
+            app:line_visible="false"
+            app:title="" >
+
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="萌聊"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </com.hjq.bar.TitleBar>
+        <FrameLayout
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:id="@+id/layout"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/banner_txt_radio_shape">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/ic_search1"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="搜索" />
+            </RelativeLayout>
+        </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.setting.SetPwd">
+
+    <include layout="@layout/my_toolbar" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/linearlayout_underline_view"
+        android:hint="请输入密码"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/pwd_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="请再次输入密码"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/sp_14" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dp_10"
+        app:sCenterTextColor="@color/colorPrimary"
+        app:sCenterTextString="确定"
+        app:sDividerLineType="none"
+        app:sShapeSelectorNormalColor="@color/white"
+        app:sShapeSelectorPressedColor="@color/gray4"
+        app:sUseShape="true" />
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.wildfire.chat.app.personalcenter.setting.Setting">
+
+    <include layout="@layout/my_toolbar" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/agree"
+        style="@style/me_wallet_superText_style"
+        android:layout_marginTop="@dimen/dp_10"
+        app:sLeftTextString="萌聊用户使用协议" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/add_type"
+        style="@style/me_wallet_superText_style"
+        android:layout_marginTop="@dimen/dp_10"
+        app:sLeftTextString="添加我的方式" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/yinsi"
+        style="@style/me_wallet_superText_style"
+        app:sLeftTextString="隐私政策" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/login_pwd"
+        style="@style/me_wallet_superText_style"
+        app:sLeftTextString="设置登录密码" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/hezuo"
+        style="@style/me_wallet_superText_style"
+        android:visibility="gone"
+        app:sLeftTextString="商务合作" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:sDividerLineType="bottom"
+        app:sLeftTextString="关于"
+        app:sShapeSelectorNormalColor="@color/white"
+        app:sShapeSelectorPressedColor="@color/gray4"
+        app:sUseShape="true" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/clear"
+        style="@style/me_wallet_superText_style"
+        android:layout_marginTop="@dimen/dp_10"
+        app:sLeftTextString="清除缓存" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/clear_message"
+        style="@style/me_wallet_superText_style"
+        android:layout_marginTop="@dimen/dp_10"
+        app:sLeftTextString="清空聊天记录" />
+
+    <View style="@style/me_view_style" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/exit"
+        style="@style/me_wallet_superText_style"
+        android:layout_marginTop="@dimen/dp_10"
+        app:sCenterTextColor="#E60012"
+        app:sCenterTextString="退出"
+        app:sDividerLineType="none" />
+
+</LinearLayout>

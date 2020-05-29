@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="周星驰"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/name"
+        android:layout_marginLeft="18dp"
+        android:layout_toEndOf="@+id/name"
+        android:text="111111"
+        android:layout_toRightOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:padding="@dimen/dp_10"
+        android:text="江苏省南通市崇川区中南世纪城11号楼808室"
+        android:textColor="@color/color_777777" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:background="@drawable/linearlayout_top_line_view"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/delete"
+            android:padding="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableLeft="@mipmap/ic_address_delete"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:text="删除" />
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:id="@+id/editor"
+            android:drawableLeft="@mipmap/ic_address_editor"
+            android:drawablePadding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改" />
+
+    </LinearLayout>
+</RelativeLayout>

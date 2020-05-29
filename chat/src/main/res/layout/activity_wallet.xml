@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    tools:context="cn.wildfire.chat.app.personalcenter.walletActivity.WalletActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar_top"
+        android:background="#DF5050"
+        app:navigationIcon="@mipmap/bar_icon_back_white">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="标题"
+            android:textColor="#F9FFB3"
+            android:textSize="18sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/bg_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DF5050"
+        android:orientation="vertical">
+
+<!--        <TextView-->
+<!--            android:id="@+id/amount_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:textColor="#F9FFB3" />-->
+
+        <ImageView
+            android:id="@+id/amount_title"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_amount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="￥0.00"
+            android:textColor="@color/white"
+            android:textSize="39sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/bg_header"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/recharge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/ic_amount"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="充值"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/gray11" />
+
+        <RelativeLayout
+            android:id="@+id/with_draw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/ic_with_draw"
+                android:drawablePadding="10dp"
+                android:text="提现"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_1"
+        android:orientation="vertical">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/bill"
+            style="@style/me_wallet_superText_style"
+            android:layout_marginTop="10dp"
+            app:sLeftIconRes="@mipmap/ic_bill"
+            app:sLeftTextString="账单" />
+
+        <View style="@style/me_view_style" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/red_package_recode"
+            style="@style/me_wallet_superText_style"
+            app:sLeftIconRes="@mipmap/ic_package"
+            app:sLeftTextString="红包记录" />
+
+        <View style="@style/me_view_style" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/recharge_record"
+            style="@style/me_wallet_superText_style"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            app:sLeftIconRes="@mipmap/ic_recharge_record"
+            app:sLeftTextString="充值记录" />
+
+        <View style="@style/me_view_style" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/pay_pwd"
+            style="@style/me_wallet_superText_style"
+            android:layout_marginTop="10dp"
+            app:sLeftIconRes="@mipmap/ic_pay_pwd"
+            app:sLeftTextString="修改支付密码" />
+
+        <View style="@style/me_view_style" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/ali"
+            style="@style/me_wallet_superText_style"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:sLeftIconRes="@mipmap/ic_ali"
+            app:sLeftTextString="提现到支付宝" />
+
+        <View style="@style/me_view_style" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/bank"
+            style="@style/me_wallet_superText_style"
+            app:sLeftIconRes="@mipmap/ic_bank"
+            app:sLeftTextString="我的银行卡" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/toolBar_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#DF5050" />
+
+
+</RelativeLayout>
