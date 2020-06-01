@@ -11,6 +11,8 @@ import android.util.Log;
 public interface Config {
 
     // 仅仅是host，没有http开头，不可配置为127.0.0.1 或者 192.168.0.1
+    //本地:192.168.31.230
+    //线上:49.235.10.84
     // 可以是IP，可以是域名，如果是域名的话只支持主域名或www域名或im的二级域名，其它二级域名不支持！建议使用域名。
     // 例如：example.com或www.example.com或im.example.com是支持的；xx.example.com或xx.yy.example.com是不支持的。
     String IM_SERVER_HOST = "49.235.10.84";

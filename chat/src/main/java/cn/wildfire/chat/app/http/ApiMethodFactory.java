@@ -390,6 +390,13 @@ public class ApiMethodFactory implements HttpService {
         httpParams1.put("mobile", mobile);
         httpParams1.put("code", code);
         httpParams1.put("platform", new Integer(2));
+        try {
+            httpParams1.put("clientId", ChatManagerHolder.gChatManager.getClientId());
+        } catch (Exception e) {
+            e.printStackTrace();
+            ToastUtils.show("网络出来问题了。。。");
+            return;
+        }
         HttpUtil.getInstance().post("userManage/weiBind", httpParams1, httpHandler);
 
 
@@ -401,6 +408,7 @@ public class ApiMethodFactory implements HttpService {
         httpParams.put("mobile", mobile);
         httpParams.put("pwd", pwd);
         httpParams.put("code", code);
+        httpParams.put("platform", new Integer(2));
         try {
             httpParams.put("clientId", ChatManagerHolder.gChatManager.getClientId());
         } catch (Exception e) {
